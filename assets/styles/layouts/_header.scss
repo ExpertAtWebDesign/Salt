@@ -1,0 +1,61 @@
+/* ################### */
+/* #####  Header  #####*/
+/* ################### */
+
+header {
+    position: fixed;
+    z-index: 1000;
+}
+
+/* Logo Section */
+
+header {
+  .logo-wrap {
+      position: absolute;
+      z-index: 300;
+      top: 60px;
+      left: 60px;
+      width: 140px;
+
+      img {
+          shape-outside: circle();
+          width: 100%;
+          height: auto;
+      }
+  }
+}
+
+/* Display Sidebar Button */
+
+.show-button {
+    position: fixed;
+    top: 105px;
+    right: 60px;
+    z-index: 300;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    shape-outside: circle();
+    overflow: hidden;
+    background-color: rgba(51,51,51,.6);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition: all .2s ease;
+}
+
+.show-button:hover {
+    background-color: rgba(51,51,51,1);
+}
+
+.show-button .line {
+    background-color: whitesmoke;
+    height: 2px;
+    width: 50%;
+    margin: 3px 0px;
+}

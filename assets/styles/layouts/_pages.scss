@@ -1,0 +1,14 @@
+section {
+  &#main {
+    position: relative;
+    z-index: 1;
+    background-color: white;
+    padding: 2em;
+  }
+  &.home {
+    top: 100vh;
+  }
+  &.default {
+    top: 40vh;
+  }
+}

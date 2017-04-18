@@ -1,0 +1,207 @@
+/* Navigation Sidebar */
+
+.sidebar {
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 400px;
+    height: 100%;
+    z-index: 400;
+
+    background-color: whitesmoke;
+
+    padding: 30px;
+
+    text-align: right;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+
+    transition: transform .2s ease;
+    -webkit-transition: transform .2s ease;
+
+    &.show {
+        box-shadow: 20px 0 100px #333333;
+
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+
+        transition: transform .5s ease;
+        -webkit-transition: transform .5s ease;
+    }
+
+    .close-button {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+
+        .line {
+            position: absolute;
+            top: 50%;
+            background-color: #333333;
+            height: 2px;
+            width: 100%;
+
+            &.line1 {
+                transform: rotate(45deg);
+                -webkit-transform: rotate(45deg);
+            }
+
+            &.line2 {
+                transform: rotate(-45deg);
+                -webkit-transform: rotate(-45deg);
+            }
+        }
+    }
+
+    /*  Navigation  */
+
+    .nav {
+        text-align: right;
+        display: inline-block;
+    }
+
+    .menu-item {
+        position: relative;
+
+        & > a {
+            font-family: 'Work Sans', sans-serif;
+            font-size: 2em;
+            line-height: 1.2em;
+            font-weight: 800;
+            color: #333333;
+            position: relative;
+            padding: 0 8px;
+
+            transition: color .3s ease;
+        }
+
+        .coolUnderline {
+            position: absolute;
+            bottom: 0px;
+            right: 0;
+            height: 100%;
+            width: 0;
+            background-color: #333333;
+            z-index: -5;
+
+            transition: all .35s ease;
+            -webkit-transition: all .35s ease;
+        }
+
+        .sub-menu-sign {
+          font-size: 2em;
+
+          transition: color .3s ease;
+        }
+
+        &:hover .sub-menu-sign {
+          color: white;
+        }
+
+        &:hover > a {
+            color: white;
+        }
+
+        &:hover .coolUnderline {
+        	width: 100%;
+        }
+
+
+        /* Sub Navigation */
+
+        .sub-menu {
+            position: absolute;
+            top: 0;
+            right: 100%;
+            text-align: right;
+            background-color: #333333;
+            padding: .5em 1em;
+            width: 0px;
+            z-index: 10;
+            overflow: hidden;
+
+
+            visibility: hidden;
+            opacity: 0;
+
+            transition: opacity .4s ease .2s, width .4s ease .2s;
+            -webkit-transition: opacity .4s ease .2s, width .4s ease .2s;
+
+            .menu-item {
+                list-style-type: none;
+                opacity: 0;
+
+                a {
+                    color: white;
+                    white-space: nowrap;
+                    font-family: 'Work Sans', sans-serif;
+                    font-size: 1.4em;
+
+                    &:hover {
+                        color: whitesmoke;
+                    }
+                }
+            }
+        }
+
+        &:hover .sub-menu {
+            visibility: visible;
+            opacity: 1;
+            width: 250px;
+
+            .menu-item {
+                opacity: 1;
+                transition: opacity .4s ease .45s;
+                -webkit-transition: opacity .4s ease .45s;
+
+
+            }
+        }
+
+    }
+
+    /* Social Navigation */
+
+    .social-wrap > a {
+        color: #333333;
+    }
+
+    .social-media-list {
+        margin-top: 1em;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .social-item {
+        list-style-type: none;
+        margin-left: 5px;
+    }
+
+    .social-item > a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 46px;
+        height: 46px;
+        line-height: 0;
+        font-size: 1.4em;
+        color: #333333;
+        border: solid 3px #333333;
+    }
+
+    .social-item > a:hover {
+      text-decoration: none;
+        color: whitesmoke;
+        background-color: #333333;
+    }
+
+}
