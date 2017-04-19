@@ -1,3 +1,7 @@
+body.page {
+  background-color: $black;
+}
+
 section {
   &#main {
     position: relative;
@@ -5,10 +9,10 @@ section {
     background-color: white;
     padding: 2em;
   }
-  &.home {
+  &.home, &.home + footer {
     top: 100vh;
   }
-  &.default {
+  &.default, &.default + footer {
     top: 40vh;
   }
 }

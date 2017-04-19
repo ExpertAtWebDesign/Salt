@@ -24,6 +24,9 @@
     },
     "jquery.js": {
       "bower": ["jquery"]
+    },
+    "skrollr.min.js": {
+      "bower": ["skrollr"]
     }
   },
   "config": {

@@ -1,26 +1,29 @@
-/* Things to appear on page load */
+var s = skrollr.init({
+  smoothScrolling: true,
+  forceHeight: false
+});
 
 jQuery(document).ready( function($) {
 
-    /* Text Decoration for Nav Menu */
-    var coolUnderline = "<span class='coolUnderline'></span>";
-    $('.menu-item').append(coolUnderline);
+  /* Text Decoration for Nav Menu */
+  var coolUnderline = "<span class='coolUnderline'></span>";
+  $('.menu-item').append(coolUnderline);
 
-    // Sidebar Functionality
-    $('.show-button').click( function() {
-        $('.sidebar').addClass('show');
-    });
+  // Sidebar Functionality
+  $('.show-button').click( function() {
+      $('.sidebar').addClass('show');
+  });
 
-    $('body > *').not('header').click( function() {
-        $('.sidebar').removeClass('show');
-    });
+  $('body > *').not('header').click( function() {
+      $('.sidebar').removeClass('show');
+  });
 
-    $('.close-button').click( function() {
-        $('.sidebar').removeClass('show');
-    });
+  $('.close-button').click( function() {
+      $('.sidebar').removeClass('show');
+  });
 
-    // Mark Submenu
+  // Mark Submenu
 
-    $('.menu-item-has-children').prepend('<span class="sub-menu-sign">+</span>');
+  $('.menu-item-has-children').prepend('<span class="sub-menu-sign">+</span>');
 
 });

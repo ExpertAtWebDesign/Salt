@@ -5,8 +5,16 @@
           <h1><?php echo get_post_meta( $post->ID, page_title, true ); ?></h1>
       </div>
   </div>
-  <video poster="<?php if( has_post_thumbnail() ) { the_post_thumbnail_url('full'); } ?>" id='introVid' playsinline autoplay muted loop>
-      <source src='#' type='video/mp4'>
+  <video poster="<?php if( has_post_thumbnail() ) { the_post_thumbnail_url('full'); } ?>" id='introVid'  playsinline autoplay muted loop>
+      <source
+      src='<?php
+        if ( get_post_meta( $post->ID, video_src, true ) != null ) {
+          echo get_post_meta( $post->ID, video_src, true );
+        } else {
+          echo "#";
+        }
+      ?>'
+      type='video/mp4'>
   </video>
 
 </section>
