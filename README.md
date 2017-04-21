@@ -1,3 +1,10 @@
+# Salty Theme
+### Created by [Expert at Web Design](http://expertatwebdesign.com)
+
+This is the theme set up to eventually replace the current website for [Mid American Salt](http://www.midamericansalt.com).
+
+Below outlines the setup of the dev environment.
+
 # [Sage](https://roots.io/sage/)
 [![Build Status](https://travis-ci.org/roots/sage.svg)](https://travis-ci.org/roots/sage)
 [![devDependency Status](https://david-dm.org/roots/sage/dev-status.svg)](https://david-dm.org/roots/sage#info=devDependencies)
