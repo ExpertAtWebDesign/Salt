@@ -26,4 +26,14 @@ jQuery(document).ready( function($) {
 
   $('.menu-item-has-children').prepend('<span class="sub-menu-sign">+</span>');
 
+  // Salt Bag Shortcode Functionality
+  $('.show-info-button').click( function() {
+
+  	$(this).next().find('li').each( function() {
+
+      $(this).toggleClass('show-info');
+
+    });;
+  });
+
 });
